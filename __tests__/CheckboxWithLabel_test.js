@@ -1,3 +1,5 @@
+jest.unmock('../CheckboxWithLabel');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
@@ -12,7 +14,6 @@ describe('CheckboxWithLabel test', () => {
 	let checkboxNode = ReactDOM.findDOMNode(checkbox);
 	
 	it('defaults to Off label', () => {
-		console.log(JSON.stringify(checkboxNode));
 		expect(checkboxNode.textContent).toEqual('Off');
 	});
 });
